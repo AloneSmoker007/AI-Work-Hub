@@ -12,8 +12,8 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="#">Quick<span>Quote</span></a>
-    <nav><a href="#how">How it works</a><a href="#offer">Offer</a><a class="nav-btn" href="#calculator">Get estimate</a></nav>
+    <a class="logo" href="#" aria-label="QuickQuote">Quick<span>Quote</span></a>
+    <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#offer">Offer</a><a class="nav-btn" href="#calculator" role="button">Get estimate</a></nav>
   </header>
 
   <main>
@@ -38,10 +38,10 @@
       <div class="calculator">
         <div>
           <div class="field"><label for="service">Service</label><select id="service"><option value="80">Basic Package — $80</option><option value="140">Premium Package — $140</option><option value="220">Full Package — $220</option></select></div>
-          <div class="field"><label for="qty">Quantity</label><input id="qty" type="number" min="1" max="99" value="1"></div>
+          <div class="field"><label for="qty">Quantity</label><input id="qty" type="number" min="1" max="99" value="1" inputmode="numeric" aria-describedby="qty-help" required><div id="qty-help" class="small">Enter 1–99.</div></div>
           <div class="field"><label for="location">Location</label><select id="location"><option value="1">Local</option><option value="1.1">Nearby (+10%)</option><option value="1.2">Outside area (+20%)</option></select></div>
         </div>
-        <aside class="result"><span>LIVE QUOTE</span><small>Starting estimate</small><strong id="estimate">$80</strong><p>Final price may vary after requirements are confirmed.</p><a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener">Send to WhatsApp →</a></aside>
+        <aside class="result"><span>LIVE QUOTE</span><small>Starting estimate</small><strong id="estimate" aria-live="polite" aria-atomic="true">$80</strong><p>Final price may vary after requirements are confirmed.</p><a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Send your quote to WhatsApp">Send to WhatsApp →</a></aside>
       </div>
     </section>
 
