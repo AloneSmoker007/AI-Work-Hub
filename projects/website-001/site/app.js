@@ -7,7 +7,10 @@ const estimate = document.querySelector("#estimate");
 const whatsapp = document.querySelector("#whatsapp");
 
 function updateQuote() {
-  const qty = Math.min(99, Math.max(1, Number(quantity.value) || 1));
+  const rawQty = Number(quantity.value);
+  const qty = Number.isFinite(rawQty)
+    ? Math.min(99, Math.max(1, Math.floor(rawQty)))
+    : 1;
   const base = Number(service.value);
   const multiplier = Number(location.value);
   const total = Math.round(base * qty * multiplier);
