@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QuickQuote turns pricing questions into qualified WhatsApp inquiries.">
+  <meta property="og:title" content="QuickQuote — Get your estimate fast">
+  <meta property="og:description" content="Choose a service, get a starting estimate, and send the requirements to WhatsApp.">
+  <meta property="og:type" content="website">
+  <title>QuickQuote — Get your estimate fast</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="QuickQuote">Quick<span>Quote</span></a>
+    <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#offer">Offer</a><a class="nav-btn" href="#calculator">Get estimate</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow"><i></i> Instant estimate · WhatsApp ready</span>
+        <h1>Know your price <em>before you call.</em></h1>
+        <p class="sub">Choose what you need, get a quick starting estimate, then send the exact requirements straight to WhatsApp. No long forms. No waiting.</p>
+        <div class="actions"><a class="primary" href="#calculator">Calculate my estimate</a><a class="secondary" href="#how">See how it works</a></div>
+        <p class="note">Mobile friendly · Fast quote · Direct WhatsApp</p>
+      </div>
+      <aside class="mockup" aria-label="QuickQuote preview">
+        <div class="mockup-head"><strong>Build your estimate</strong><span>● Ready</span></div>
+        <div class="mock-card"><small>Service</small><strong>Premium</strong><small>Choose a service and quantity to see a starting price.</small></div>
+        <div class="mock-card row"><b>1</b><span><strong>Choose service</strong><small>Basic, Premium or Full package</small></span><small>Step 1</small></div>
+        <div class="mock-card row"><b>2</b><span><strong>Send to WhatsApp</strong><small>Your requirements go with the message</small></span><small>Step 2</small></div>
+      </aside>
+    </section>
+
+    <section id="calculator" class="section">
+      <div class="center"><small>GET YOUR ESTIMATE</small><h2>Build your quote in seconds.</h2><p>Pick a service, quantity and area. Your starting estimate updates instantly.</p></div>
+      <div class="calculator">
+        <div>
+          <div class="field"><label for="service">Service</label><select id="service"><option value="80">Basic Package — $80</option><option value="140">Premium Package — $140</option><option value="220">Full Package — $220</option></select></div>
+          <div class="field"><label for="qty">Quantity</label><input id="qty" type="number" min="1" max="99" value="1" inputmode="numeric" aria-describedby="qty-help" required><div id="qty-help" class="small">Enter 1–99.</div></div>
+          <div class="field"><label for="location">Location</label><select id="location"><option value="1">Local</option><option value="1.1">Nearby (+10%)</option><option value="1.2">Outside area (+20%)</option></select></div>
+        </div>
+        <aside class="result"><span>LIVE QUOTE</span><small>Starting estimate</small><strong id="estimate" aria-live="polite" aria-atomic="true">$80</strong><p>Final price may vary after requirements are confirmed.</p><a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Send your quote to WhatsApp">Send to WhatsApp →</a></aside>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="center"><small>3 SIMPLE STEPS</small><h2>From visitor to inquiry.</h2><p>Give customers an answer first, then turn that intent into a useful WhatsApp conversation.</p></div>
+      <div class="cards"><article><b>💰</b><h3>Instant estimate</h3><p>Visitors understand the starting price before contacting the business.</p></article><article><b>📲</b><h3>WhatsApp handoff</h3><p>The selected service and requirements are included in the message.</p></article><article><b>🎯</b><h3>Qualified inquiries</h3><p>Businesses receive useful requirements instead of vague “How much?” messages.</p></article></div>
+    </section>
+
+    <section id="offer" class="section offer">
+      <div class="center"><small>BUSINESS OFFER</small><h2>Turn price questions into leads.</h2></div>
+      <div class="trust"><span>✓ No app required</span><span>✓ Works on mobile</span><span>✓ WhatsApp ready</span><span>✓ Easy to customize</span></div>
+      <div class="price"><small>QUICKQUOTE TEMPLATE</small><strong>Custom</strong><p>Replace demo services, prices and the WhatsApp number for a real business.</p><ul><li>Mobile-first quote experience</li><li>WhatsApp lead handoff</li><li>Custom services & pricing</li><li>Fast static deployment</li></ul><a class="primary" href="#calculator">Request a demo</a></div>
+    </section>
+  </main>
+  <footer>© 2026 QuickQuote · A lightweight WhatsApp-first business template.</footer>
+  <script src="./app.js"></script>
+</body>
+</html>

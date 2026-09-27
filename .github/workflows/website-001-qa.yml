@@ -1,0 +1,33 @@
+name: Website 001 QA
+
+on:
+  push:
+    paths:
+      - "projects/website-001/**"
+      - ".github/workflows/website-001-qa.yml"
+  pull_request:
+    paths:
+      - "projects/website-001/**"
+      - ".github/workflows/website-001-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check JavaScript syntax
+        run: node --check projects/website-001/site/app.js
+
+      - name: Run static QA checks
+        run: node projects/website-001/qa/verify.mjs
