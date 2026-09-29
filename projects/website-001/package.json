@@ -1,0 +1,16 @@
+{
+  "name": "website-001-quickquote",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QuickQuote — a reusable WhatsApp-first quote-calculator website template.",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check site/app.js",
+    "test": "node qa/verify.mjs && node qa/release-gate.mjs",
+    "test:release": "node qa/verify.mjs && node qa/release-gate.mjs --release"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

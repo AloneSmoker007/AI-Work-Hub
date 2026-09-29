@@ -31,12 +31,21 @@ Before customer delivery, replace every demo value with the customer's real busi
 
 ### Final checks
 
+- Run the project's verification suite first:
+  `npm test` in `projects/website-001/` (or `node qa/verify.mjs`).
+  It executes the real `app.js` against a fake DOM and covers quantity edge
+  cases, the WhatsApp deep link, injection safety, link integrity, and
+  accessibility wiring.
 - Test quantity values 1, 99, 100, 0, negative, empty, decimal, and non-numeric input.
 - Confirm the estimate never becomes NaN or Infinity.
 - Confirm the WhatsApp message contains the selected service, quantity, location, and estimate.
+- **Confirm `WHATSAPP_NUMBER` is the customer's real number** — it is validated as
+  8–15 digits after stripping non-digits. An invalid number disables the CTA
+  rather than shipping a dead `wa.me` link, so check the button still works.
 - Test keyboard navigation and visible focus.
 - Test a narrow mobile viewport.
 - Test dark mode and reduced-motion preferences.
 - Confirm all links and buttons work.
-- Confirm the real WhatsApp number is present before delivery.
-- Run the project's available build/test/lint checks before release.
+- Run `node qa/release-gate.mjs --release` before delivery. It will refuse to
+  pass until the human/browser checklist in `REVIEW.md` is ticked — that is
+  deliberate. Do not tick those boxes without doing the pass.
