@@ -1,0 +1,25 @@
+version: 2
+
+updates:
+  # Keep GitHub Actions pinned to current commit SHAs.
+  # Dependabot opens a PR that bumps the SHA and the version comment together.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/projects/website-001"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+    labels:
+      - "dependencies"
+    # This project is intentionally dependency-free. If a dependency is ever
+    # added, Dependabot will still track it without forcing one to exist now.
+    open-pull-requests-limit: 5

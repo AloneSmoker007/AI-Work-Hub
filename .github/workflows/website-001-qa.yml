@@ -11,23 +11,47 @@ on:
       - ".github/workflows/website-001-qa.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
+# Least privilege at the workflow level. Jobs declare their own scope too.
+permissions: {}
+
+concurrency:
+  group: website-001-qa-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   qa:
+    name: Behaviour + security suite
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    # SECURITY (M-1 in the audit):
+    # This job *executes* repository code via `node qa/verify.mjs`. A pull
+    # request from a fork can rewrite that file, so fork PRs must never reach
+    # this job. `permissions: contents: read` below keeps the blast radius
+    # minimal, but the safe default is to not execute untrusted code at all.
+    # If a secret or a write-scoped token is ever needed, put this job behind a
+    # GitHub Environment with required reviewers instead of removing this guard.
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
+
+    permissions:
+      contents: read
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
 
       - name: Check JavaScript syntax
         run: node --check projects/website-001/site/app.js
 
-      - name: Run static QA checks
+      - name: Run behaviour + security suite
         run: node projects/website-001/qa/verify.mjs
+
+      - name: Enforce release gate (REVIEW.md must be signed off)
+        run: node projects/website-001/qa/release-gate.mjs
