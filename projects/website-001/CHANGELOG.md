@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+### Changed
+- **Niche customization: astrologers.** `site/index.html` re-oriented from the
+  generic QuickQuote demo to an astrology quote/booking landing page (brand
+  "AstroQuote"): readings instead of generic packages (Birth Chart $49, Love &
+  Compatibility $89, Full Life Reading $149 — demo prices), consultation-mode
+  multipliers (video/phone +0%, in-person +25%), booking-oriented CTA copy and
+  SEO/OG metadata. `app.js` and `styles.css` are intentionally untouched, so
+  the reusable template architecture, the WhatsApp number placeholder
+  (`15551234567`), and all 175 QA assertions keep working unchanged.
+- **Demo deployment.** GitHub Pages workflow
+  (`.github/workflows/website-001-deploy.yml`) publishes
+  `projects/website-001/site/` on push to `main`. Static upload only — no
+  repository code executes in the deploy job. All actions pinned by commit
+  SHA. `deployment.md` records the live URL and evidence.
+
+### Added
+- **`offer-hypothesis.md`** — niche rationale and the one-time setup +
+  optional maintenance price hypothesis, explicitly labelled UNVALIDATED.
+- **`outreach-list.md`** — draft outreach plan, message template and tracking
+  table (PIF-free; no real prospect data committed).
+- **`delivery-and-maintenance-offer.md`** — draft delivery scope, maintenance
+  offer and per-customer delivery checklist.
+
 ### Added
 - **Real QA suite** (`qa/verify.mjs`) that executes the shipped `app.js` through
   `node:vm` against a fake DOM and drives it with `input`/`change` events. 174

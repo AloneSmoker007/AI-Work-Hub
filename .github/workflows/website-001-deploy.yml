@@ -1,0 +1,51 @@
+name: Deploy Website 001 (GitHub Pages)
+
+# Publishes the static demo at projects/website-001/site/ to GitHub Pages.
+# This workflow uploads static files only — it never executes repository code,
+# never receives secrets, and never runs for pull requests (including forks).
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "projects/website-001/site/**"
+      - ".github/workflows/website-001-deploy.yml"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: website-001-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy to Pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: projects/website-001/site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

@@ -23,12 +23,12 @@ Turn the first website concept into a reusable, polished, deployable template th
 - [x] Customer customization points documented — `CUSTOMIZE.md`
 - [x] Favicon — inline SVG data URI, asserted present
 
-### Remaining (needs a human — blocked on the release gate)
+### Remaining
 - [ ] Browser/device pass: mobile, desktop, keyboard, focus, dark mode, reduced motion
-- [ ] Target niche selected and offer/price hypothesis documented
-- [ ] Demo URL deployed and recorded in `deployment.md`
-- [ ] Outreach list started
-- [ ] Delivery/maintenance offer defined
+- [x] Target niche selected and offer/price hypothesis documented — **astrologers**; see `offer-hypothesis.md` (pricing explicitly labelled unvalidated)
+- [ ] Demo URL deployed and recorded in `deployment.md` — GitHub Pages deploy in progress; URL recorded after live verification
+- [x] Outreach list started — draft plan, message template and tracking table in `outreach-list.md` (no prospect data committed)
+- [x] Delivery/maintenance offer defined — draft scope and delivery checklist in `delivery-and-maintenance-offer.md`
 
 ## Workflow
 1. Luna defines requirements.

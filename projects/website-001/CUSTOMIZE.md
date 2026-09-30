@@ -1,5 +1,13 @@
 # Website 001 — Customization Guide
 
+## Current demo state
+
+The live demo is customized for the first niche: **astrologers** (brand
+"AstroQuote", readings and consultation-mode pricing). All values on the demo
+site are **demo/hypothesis values**, not a real astrologer's pricing — see
+`offer-hypothesis.md`. Before delivering to a paying customer, work through
+"Required changes" below for that customer's real data.
+
 ## QuickQuote Template
 
 Before customer delivery, replace every demo value with the customer's real business information.
