@@ -3,61 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="QuickQuote turns pricing questions into qualified WhatsApp inquiries.">
-  <meta property="og:title" content="QuickQuote — Get your estimate fast">
-  <meta property="og:description" content="Choose a service, get a starting estimate, and send the requirements to WhatsApp.">
+  <meta name="description" content="AstroQuote turns astrology questions into clear WhatsApp bookings. Choose a reading, get a starting estimate, and send your details to WhatsApp.">
+  <meta property="og:title" content="AstroQuote — Know your reading's price before you book">
+  <meta property="og:description" content="Choose an astrology reading, get a starting estimate, and send your birth details straight to WhatsApp.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='32' y='45' font-family='Inter,system-ui,sans-serif' font-size='38' font-weight='900' fill='%23fff' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E">
-  <title>QuickQuote — Get your estimate fast</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='32' y='45' font-family='Inter,system-ui,sans-serif' font-size='38' font-weight='900' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <title>AstroQuote — Astrology readings, priced before you book</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="#" aria-label="QuickQuote">Quick<span>Quote</span></a>
-    <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#offer">Offer</a><a class="nav-btn" href="#calculator">Get estimate</a></nav>
+    <a class="logo" href="#" aria-label="AstroQuote">Astro<span>Quote</span></a>
+    <nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#offer">Readings</a><a class="nav-btn" href="#calculator">Get estimate</a></nav>
   </header>
 
   <main>
     <section class="hero">
       <div>
-        <span class="eyebrow"><i></i> Instant estimate · WhatsApp ready</span>
-        <h1>Know your price <em>before you call.</em></h1>
-        <p class="sub">Choose what you need, get a quick starting estimate, then send the exact requirements straight to WhatsApp. No long forms. No waiting.</p>
+        <span class="eyebrow"><i></i> Instant estimate · WhatsApp booking</span>
+        <h1>Know your reading's price <em>before you book.</em></h1>
+        <p class="sub">Choose the reading that fits your question, get a clear starting estimate, then send your details straight to WhatsApp. No long forms. No waiting.</p>
         <div class="actions"><a class="primary" href="#calculator">Calculate my estimate</a><a class="secondary" href="#how">See how it works</a></div>
-        <p class="note">Mobile friendly · Fast quote · Direct WhatsApp</p>
+        <p class="note">Mobile friendly · Clear pricing · Direct WhatsApp</p>
       </div>
-      <aside class="mockup" aria-label="QuickQuote preview">
-        <div class="mockup-head"><strong>Build your estimate</strong><span>● Ready</span></div>
-        <div class="mock-card"><small>Service</small><strong>Premium</strong><small>Choose a service and quantity to see a starting price.</small></div>
-        <div class="mock-card row"><b>1</b><span><strong>Choose service</strong><small>Basic, Premium or Full package</small></span><small>Step 1</small></div>
-        <div class="mock-card row"><b>2</b><span><strong>Send to WhatsApp</strong><small>Your requirements go with the message</small></span><small>Step 2</small></div>
+      <aside class="mockup" aria-label="AstroQuote preview">
+        <div class="mockup-head"><strong>Build your reading quote</strong><span>● Ready</span></div>
+        <div class="mock-card"><small>Reading</small><strong>Birth Chart</strong><small>Choose a reading and quantity to see a starting price.</small></div>
+        <div class="mock-card row"><b>1</b><span><strong>Choose reading</strong><small>Birth chart, love or full life</small></span><small>Step 1</small></div>
+        <div class="mock-card row"><b>2</b><span><strong>Send to WhatsApp</strong><small>Your details go with the message</small></span><small>Step 2</small></div>
       </aside>
     </section>
 
     <section id="calculator" class="section">
-      <div class="center"><small>GET YOUR ESTIMATE</small><h2>Build your quote in seconds.</h2><p>Pick a service, quantity and area. Your starting estimate updates instantly.</p></div>
+      <div class="center"><small>GET YOUR ESTIMATE</small><h2>Build your reading quote in seconds.</h2><p>Pick a reading, quantity and consultation mode. Your starting estimate updates instantly.</p></div>
       <div class="calculator">
         <div>
-          <div class="field"><label for="service">Service</label><select id="service"><option value="80">Basic Package — $80</option><option value="140">Premium Package — $140</option><option value="220">Full Package — $220</option></select></div>
-          <div class="field"><label for="qty">Quantity</label><input id="qty" type="number" min="1" max="99" value="1" inputmode="numeric" aria-describedby="qty-help" required><div id="qty-help" class="small">Enter 1–99.</div></div>
-          <div class="field"><label for="location">Location</label><select id="location"><option value="1">Local</option><option value="1.1">Nearby (+10%)</option><option value="1.2">Outside area (+20%)</option></select></div>
+          <div class="field"><label for="service">Reading</label><select id="service"><option value="49">Birth Chart Reading — $49</option><option value="89">Love &amp; Compatibility — $89</option><option value="149">Full Life Reading — $149</option></select></div>
+          <div class="field"><label for="qty">Quantity</label><input id="qty" type="number" min="1" max="99" value="1" inputmode="numeric" aria-describedby="qty-help" required><div id="qty-help" class="small">Number of readings — enter 1–99.</div></div>
+          <div class="field"><label for="location">Consultation mode</label><select id="location"><option value="1">Video call (+0%)</option><option value="1">Phone call (+0%)</option><option value="1.25">In-person session (+25%)</option></select></div>
         </div>
-        <aside class="result"><span>LIVE QUOTE</span><small>Starting estimate</small><strong id="estimate" aria-live="polite" aria-atomic="true">$80</strong><p>Final price may vary after requirements are confirmed.</p><a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Send your quote to WhatsApp">Send to WhatsApp →</a></aside>
+        <aside class="result"><span>LIVE QUOTE</span><small>Starting estimate</small><strong id="estimate" aria-live="polite" aria-atomic="true">$49</strong><p>Final price may vary after your birth details are reviewed.</p><a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Send your reading request to WhatsApp">Book on WhatsApp →</a></aside>
       </div>
     </section>
 
     <section id="how" class="section">
-      <div class="center"><small>3 SIMPLE STEPS</small><h2>From visitor to inquiry.</h2><p>Give customers an answer first, then turn that intent into a useful WhatsApp conversation.</p></div>
-      <div class="cards"><article><b>💰</b><h3>Instant estimate</h3><p>Visitors understand the starting price before contacting the business.</p></article><article><b>📲</b><h3>WhatsApp handoff</h3><p>The selected service and requirements are included in the message.</p></article><article><b>🎯</b><h3>Qualified inquiries</h3><p>Businesses receive useful requirements instead of vague “How much?” messages.</p></article></div>
+      <div class="center"><small>3 SIMPLE STEPS</small><h2>From question to clarity.</h2><p>Get a real answer on price first, then turn it into a personal conversation on WhatsApp.</p></div>
+      <div class="cards"><article><b>🔮</b><h3>Instant estimate</h3><p>You see the starting price of your reading before reaching out.</p></article><article><b>📲</b><h3>WhatsApp handoff</h3><p>Your chosen reading, quantity and estimate travel with the message.</p></article><article><b>🌟</b><h3>Personal guidance</h3><p>The astrologer replies with availability and the next steps for your reading.</p></article></div>
     </section>
 
     <section id="offer" class="section offer">
-      <div class="center"><small>BUSINESS OFFER</small><h2>Turn price questions into leads.</h2></div>
-      <div class="trust"><span>✓ No app required</span><span>✓ Works on mobile</span><span>✓ WhatsApp ready</span><span>✓ Easy to customize</span></div>
-      <div class="price"><small>QUICKQUOTE TEMPLATE</small><strong>Custom</strong><p>Replace demo services, prices and the WhatsApp number for a real business.</p><ul><li>Mobile-first quote experience</li><li>WhatsApp lead handoff</li><li>Custom services & pricing</li><li>Fast static deployment</li></ul><a class="primary" href="#calculator">Request a demo</a></div>
+      <div class="center"><small>READINGS FOR EVERY QUESTION</small><h2>Clarity for love, career and life paths.</h2></div>
+      <div class="trust"><span>✓ No app required</span><span>✓ Works on mobile</span><span>✓ WhatsApp booking</span><span>✓ Clear starting prices</span></div>
+      <div class="price"><small>ASTROLOGY READINGS</small><strong>From $49</strong><p>Every reading starts with a clear estimate — confirm your details on WhatsApp.</p><ul><li>Birth chart &amp; compatibility readings</li><li>Instant starting estimate</li><li>Direct WhatsApp booking</li><li>Personal, one-to-one guidance</li></ul><a class="primary" href="#calculator">Start my estimate</a></div>
     </section>
   </main>
-  <footer>© 2026 QuickQuote · A lightweight WhatsApp-first business template.</footer>
+  <footer>© 2026 AstroQuote · A lightweight WhatsApp-first astrology reading demo.</footer>
   <script src="./app.js"></script>
 </body>
 </html>
