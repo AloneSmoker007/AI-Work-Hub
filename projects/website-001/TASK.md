@@ -24,9 +24,9 @@ Turn the first website concept into a reusable, polished, deployable template th
 - [x] Favicon — inline SVG data URI, asserted present
 
 ### Remaining
-- [ ] Browser/device pass: mobile, desktop, keyboard, focus, dark mode, reduced motion
+- [x] Browser/device pass: mobile, desktop, keyboard, focus, dark mode, reduced motion — **verified 2026-10-04**, evidence in `REVIEW.md`
 - [x] Target niche selected and offer/price hypothesis documented — **astrologers**; see `offer-hypothesis.md` (pricing explicitly labelled unvalidated)
-- [ ] Demo URL deployed and recorded in `deployment.md` — GitHub Pages deploy in progress; URL recorded after live verification
+- [x] Demo URL deployed and recorded in `deployment.md` — **https://alonesmoker007.github.io/AI-Work-Hub/** live-verified 2026-10-04
 - [x] Outreach list started — draft plan, message template and tracking table in `outreach-list.md` (no prospect data committed)
 - [x] Delivery/maintenance offer defined — draft scope and delivery checklist in `delivery-and-maintenance-offer.md`
 
